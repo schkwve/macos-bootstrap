@@ -53,11 +53,15 @@ install_cask lulu
 install_pkg neovim
 
 # Install BetterDiscord
-echo "Running BetterDiscord Installer..."
+printf "Running BetterDiscord Installer...\n"
 xattr -d com.apple.quarantine /Applications/BetterDiscord.app >/dev/null 2>&1
 open /Applications/BetterDiscord.app
 
 # Copy config dotfiles
-echo "Copying configuration files..."
+printf "Copying configuration files...\n"
 touch ~/.hushlogin
 cp -r dots/. ~/
+
+# Notify the user of Firefox extensions and themes
+printf "All done!\n"
+printf "To finish the install, see the post-install notes in the README."
