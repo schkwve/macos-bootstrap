@@ -1,0 +1,7 @@
+https://raw.githubusercontent.com/ordinall/BetterDiscord-Stuff/e3b88c03a3b30f8c6d56c5335f913909117ac386/Plugins/SpotifyListenAlong/SpotifyListenAlong.plugin.js
+https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/c5aed03123c1774474100467af123d6d8d3a06c8/Plugins/BetterFriendList/BetterFriendList.plugin.js
+https://raw.githubusercontent.com/QWERTxD/BetterDiscordPlugins/b63c91165ea1702afa09777d2e738889959a17af/InAppNotifications/InAppNotifications.plugin.js
+https://raw.githubusercontent.com/mwittrien/BetterDiscordAddons/569425009fa37e1d9d5128011ad1284b387fbbf7/Library/0BDFDB.plugin.js
+https://raw.githubusercontent.com/rauenzi/BetterDiscordAddons/master/Plugins/DoNotTrack/DoNotTrack.plugin.js
+https://raw.githubusercontent.com/Skamt/BDAddons/main/ViewProfilePicture/ViewProfilePicture.plugin.js
+https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js

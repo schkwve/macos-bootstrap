@@ -57,6 +57,11 @@ printf "Running BetterDiscord Installer...\n"
 xattr -d com.apple.quarantine /Applications/BetterDiscord.app >/dev/null 2>&1
 open /Applications/BetterDiscord.app
 
+# BetterDiscord plugins and themes
+wget -i discord-plugins.txt -P "~/Library/Application Support/BetterDiscord/plugins" >/dev/null 2>&1 || exit 1
+wget -i discord-themes.txt -P "~/Library/Application Support/BetterDiscord/themes" >/dev/null 2>&1 || exit 1
+mv ~/Library/Application\ Support/BetterDiscord/themes/style.css ~/Library/Application\ Support/BetterDiscord/themes/Black\ Hole.theme.css
+
 # Copy config dotfiles
 printf "Copying configuration files...\n"
 touch ~/.hushlogin
