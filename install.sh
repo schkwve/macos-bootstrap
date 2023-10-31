@@ -52,6 +52,8 @@ install_cask vlc
 install_cask lulu
 install_pkg neovim
 install_pkg alacritty
+install_pkg gotop
+install_pkg neofetch
 
 # Install BetterDiscord
 printf "Running BetterDiscord Installer...\n"
