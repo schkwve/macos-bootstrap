@@ -51,6 +51,7 @@ install_cask betterdiscord-installer
 install_cask vlc
 install_cask lulu
 install_pkg neovim
+install_pkg alacritty
 
 # Install BetterDiscord
 printf "Running BetterDiscord Installer...\n"
@@ -58,14 +59,35 @@ xattr -d com.apple.quarantine /Applications/BetterDiscord.app >/dev/null 2>&1
 open /Applications/BetterDiscord.app
 
 # BetterDiscord plugins and themes
-wget -i discord-plugins.txt -P "~/Library/Application Support/BetterDiscord/plugins" >/dev/null 2>&1 || exit 1
-wget -i discord-themes.txt -P "~/Library/Application Support/BetterDiscord/themes" >/dev/null 2>&1 || exit 1
-mv ~/Library/Application\ Support/BetterDiscord/themes/style.css ~/Library/Application\ Support/BetterDiscord/themes/Black\ Hole.theme.css
+echo "Downloading BetterDiscord plugins and themes..."
+wget -i discord-plugins.txt -P "${HOME}/Library/Application Support/BetterDiscord/plugins" >/dev/null 2>&1 || exit 1
+wget -i discord-themes.txt -P "${HOME}/Library/Application Support/BetterDiscord/themes" >/dev/null 2>&1 || exit 1
+mv ${HOME}/Library/Application\ Support/BetterDiscord/themes/style.css ${HOME}/Library/Application\ Support/BetterDiscord/themes/Black\ Hole.theme.css
 
 # Copy config dotfiles
 printf "Copying configuration files...\n"
-touch ~/.hushlogin
-cp -r dots/. ~/
+touch ${HOME}/.hushlogin
+cp -r dots/. ${HOME}/
+
+# Set sensible defaults
+chmod +x set-defaults.sh
+./set-defaults.sh  >/dev/null 2>&1
+
+# Kill affected applications
+for app in "Activity Monitor" \
+	"Address Book" \
+	"Calendar" \
+	"cfprefsd" \
+	"Contacts" \
+	"Dock" \
+	"Finder" \
+	"Mail" \
+	"Messages" \
+	"Photos" \
+	"Safari" \
+	"SystemUIServer"; do
+	killall "${app}" &> /dev/null
+done
 
 # Notify the user of Firefox extensions and themes
 printf "All done!\n"
