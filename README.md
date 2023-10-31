@@ -1,5 +1,7 @@
 # macOS Bootstrap
 
+Collection of configuration files and a bootstrap script to set up a new macOS install.
+
 ## Post-installation
 
 After the script finishes, some things still need to be done:
