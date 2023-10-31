@@ -68,6 +68,11 @@ install_pkg fzf
 install_pkg koekeishiya/formulae/skhd
 install_pkg koekeishiya/formulae/yabai
 
+# Install simple-bar
+printf "Installing simple-bar...\n"
+git clone https://github.com/Jean-Tinland/simple-bar $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar
+ln -s /opt/homebrew/bin/yabai /usr/local/bin/yabai
+
 # Install BetterDiscord
 printf "Running BetterDiscord Installer...\n"
 xattr -d com.apple.quarantine /Applications/BetterDiscord.app >/dev/null 2>&1
@@ -85,6 +90,7 @@ touch ${HOME}/.hushlogin
 cp -r dots/. ${HOME}/
 
 # Set sensible defaults
+printf "Setting macOS defaults...\n"
 chmod +x set-defaults.sh
 ./set-defaults.sh  >/dev/null 2>&1
 
