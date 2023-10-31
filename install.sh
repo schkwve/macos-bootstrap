@@ -24,6 +24,12 @@ if [ $uname != "Darwin" ]; then
 	exit 1
 fi
 
+# Display SIP notice
+printf "For yabai to work properly, SIP must be partially disabled.\n"
+printf "See https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection for more info.\n"
+printf "\nIf you don't have SIP disabled already, press Ctrl-C, and disable it. Otherwise the installation will begin after 10 seconds...\n"
+sleep 10
+
 # Check for XCode Command Line Tools
 xcode-select -p >/dev/null 2>&1
 if [ $? -eq 0 ]; then
