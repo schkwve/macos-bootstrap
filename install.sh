@@ -57,9 +57,16 @@ install_cask betterdiscord-installer
 install_cask vlc
 install_cask lulu
 install_pkg neovim
-install_pkg alacritty
+install_pkg iterm2
+install_pkg kitty
 install_pkg gotop
 install_pkg neofetch
+install_pkg exa
+install_pkg lazygit
+install_pkg yarn
+install_pkg fzf
+install_pkg koekeishiya/formulae/skhd
+install_pkg koekeishiya/formulae/yabai
 
 # Install BetterDiscord
 printf "Running BetterDiscord Installer...\n"
